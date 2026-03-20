@@ -1,0 +1,30 @@
+<h1>Mi sitio Web</h1>
+
+<mat-tab-group>
+
+  <mat-tab label="Inicio">
+    <ng-template mat-tab-label>
+       <mat-icon fontIcon="home">thumb_up</mat-icon>
+       <span>Inicio</span>
+      
+
+    </ng-template>
+    <app-contenido></app-contenido>
+  </mat-tab>
+
+  <mat-tab label="Productos">
+    <app-contenido2></app-contenido2>
+  </mat-tab>
+
+  <mat-tab label="Perfil">
+    <app-contenido3></app-contenido3>
+  </mat-tab>
+
+  <mat-tab label="Servicios">
+    <app-contenido4></app-contenido4>
+  </mat-tab>
+
+</mat-tab-group>
+
+
+<router-outlet />

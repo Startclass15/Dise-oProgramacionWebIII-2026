@@ -1,0 +1,24 @@
+<!-- Widget ElTiempo.ai INICIO -->
+<div style="width: 100%; max-width: 320px; margin: 0 auto;">
+  <iframe 
+    id="eltiempo-widget-1773965204881"
+    src="https://www.eltiempo.ai/widget.php?ciudad=Oruro" 
+    width="100%" 
+    height="320" 
+    frameborder="0" 
+    scrolling="no" 
+    title="El tiempo en Oruro"
+    style="border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: block; width: 1px; min-width: 100%; transition: height 0.2s;">
+  </iframe>
+  <script>
+    window.addEventListener('message', function(e) {
+      if (e.data && e.data.type === 'eltiempo-resize') {
+        var iframes = document.querySelectorAll('iframe[src*="eltiempo.ai/widget.php"]');
+        for(var i=0; i<iframes.length; i++) {
+            iframes[i].style.height = e.data.height + 'px';
+        }
+      }
+    });
+  </script>
+</div>
+<!-- Widget ElTiempo.ai FIN -->
