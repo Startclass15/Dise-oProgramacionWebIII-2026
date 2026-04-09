@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatIconModule} from '@angular/material/icon';
@@ -9,6 +9,15 @@ import { Contenido3 } from './contenido3/contenido3';
 import { Contenido4 } from './contenido4/contenido4';
 
 
+//Importacion del modulo 
+import {MatToolbarModule} from '@angular/material/toolbar';
+
+//Importar el modulo Bottom Sheet
+import {MatBottomSheetModule,
+  MatBottomSheet, MatBottomSheetRef
+
+} from '@angular/material/bottom-sheet';
+
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet,MatTabsModule,
@@ -16,11 +25,17 @@ import { Contenido4 } from './contenido4/contenido4';
     Contenido2,
     Contenido3,
     Contenido4,
-    MatIconModule
+    MatIconModule,
+    MatToolbarModule,
+    MatBottomSheetModule
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('primero');
+  private _bottomSheet=inject(MatBottomSheet);
+  mostrarBarra(): void{
+    this._bottomSheet.open(Contenido3)
+  }
 }
