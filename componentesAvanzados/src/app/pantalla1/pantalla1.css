@@ -1,0 +1,12 @@
+.cardPrueba{
+    max-width: 300px;
+    margin: 10px;
+}
+.imagen{
+    background-image: url("https://marketplace.canva.com/EAGtHbkXgx4/1/0/1600w/canva-logo-empresa-constructora-moderna-simple-azul-y-blanco-Z7dmpHO46EU.jpg");
+    background-size: cover;
+}
+.contenedorCards{
+    padding: 30px;
+    display:flex;
+}
