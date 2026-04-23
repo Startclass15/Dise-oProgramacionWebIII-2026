@@ -1,60 +1,21 @@
-<div class="contenedorCards">
+<div class="contenedorCards" *ngFor="let item of datos">
 <mat-card class="cardPrueba"> 
     <mat-card-header>
         <div mat-card-avatar class="imagen">
         </div>
         <mat-card-title>
-            CardView
+            {{item.titulo}}
         </mat-card-title>
         <mat-card-subtitle>
-            Subititulo
+            {{item.subtitulo}}
         </mat-card-subtitle>
     </mat-card-header>
-     <img mat-card-image src="https://i.blogs.es/e7f8b6/xiaomi-tv-f/650_1200.jpg" alt="">
+     <img mat-card-image [src]="item.imagen" alt="">
     <mat-card-content>
-       <p>Contenido del card view</p>
+       <p>{{item.descripcion}} </p>
     </mat-card-content>
     <mat-card-actions>
         <button mat-button>Enviar</button>
     </mat-card-actions>
 </mat-card>
-<mat-card class="cardPrueba"> 
-    <mat-card-header>
-        <div mat-card-avatar class="imagen">
-        </div>
-        <mat-card-title>
-            CardView
-        </mat-card-title>
-        <mat-card-subtitle>
-            Subititulo
-        </mat-card-subtitle>
-    </mat-card-header>
-     <img mat-card-image src="https://i.blogs.es/e7f8b6/xiaomi-tv-f/650_1200.jpg" alt="">
-    <mat-card-content>
-       <p>Contenido del card view</p>
-    </mat-card-content>
-    <mat-card-actions>
-        <button mat-button>Enviar</button>
-    </mat-card-actions>
-</mat-card>
-<mat-card class="cardPrueba"> 
-    <mat-card-header>
-        <div mat-card-avatar class="imagen">
-        </div>
-        <mat-card-title>
-            CardView
-        </mat-card-title>
-        <mat-card-subtitle>
-            Subititulo
-        </mat-card-subtitle>
-    </mat-card-header>
-     <img mat-card-image src="https://i.blogs.es/e7f8b6/xiaomi-tv-f/650_1200.jpg" alt="">
-    <mat-card-content>
-       <p>Contenido del card view</p>
-    </mat-card-content>
-    <mat-card-actions>
-        <button mat-button>Enviar</button>
-    </mat-card-actions>
-</mat-card>
-
 </div>
